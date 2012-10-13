@@ -96,14 +96,14 @@ class IGeneralSettings(Interface):
                           default=True,
                           required=True,)
 
-    gallery_width = schema.Int(title=_(u"Gallery width"),
+    gallery_width = schema.TextLine(title=_(u"Gallery width"),
                              description=_(u"Manually set a gallery width."),
-                             default=500,
+                             default=_(u"auto"),
                              required=True,)
 
-    gallery_height = schema.Int(title=_(u"Gallery height"),
+    gallery_height = schema.Float(title=_(u"Gallery height"),
                               description=_(u"Manually set a gallery height."),
-                              default=500,
+                              default=float(500),
                               required=True,)
 
     imagePosition = schema.TextLine(title=_(u"Image css position"),

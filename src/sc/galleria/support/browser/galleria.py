@@ -201,7 +201,7 @@ class Galleria(BrowserView):
     def galleriaconf(self):
         """ Galleria configuration """
         return """Galleria.configure({
-                             width: %s,
+                             width: '%s',
                              height: %s,
                              autoplay: %s,
                              wait: %s,
@@ -229,8 +229,8 @@ class Galleria(BrowserView):
                              });
                              },
 
-                            });""" % (int(self.settings.gallery_width),
-                                      int(self.settings.gallery_height),
+                            });""" % (str(self.settings.gallery_width),
+                                      float(self.settings.gallery_height),
                                       str(self.settings.autoplay).lower(),
                                       int(self.settings.gallery_wait),
                                       str(self.settings.showInf).lower(),
